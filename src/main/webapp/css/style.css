@@ -1,0 +1,196 @@
+body {
+	width: 100%;
+	height: 100%;
+	background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+	 background-repeat: no-repeat;
+	 background-attachment: fixed;
+	 background-size: 100% 100%;
+}
+#master_panel {
+	width: 2000px;
+	height: 900px;
+	background-color: #0A101A;
+	color: white;
+}
+.editor_panel {
+	float: left;
+	background-color: #0A101A;
+	height: 100%;
+	color: white;
+	margin-left: 2%;
+	font-family: 'Orbitron', sans-serif;
+	letter-spacing: 0.2vh;
+}
+#slots, #filters {
+	width: 13%;
+	height: 100%;
+}
+#Lua_Editor {
+	width: 68%;
+	height: 100%;
+}
+#Lua_Editor h2 {
+	float: left;
+	width: 20%;
+}
+#Lua_Editor .lua_buttons {
+	float: left;
+	width: 60%;
+	margin-right: 20%;
+}
+.lua_buttons .func {
+	float: left;
+	display: block;
+	width: 10%;
+	margin-top: 3.5%;
+}
+.lua_buttons a {
+	text-decoration: none;
+	color: white;
+}
+.lua_buttons a:hover {
+	text-decoration: none;
+	color: red;
+}
+.slot{
+	float:right;
+	width:250px;
+	height: 45px;
+	margin-right:0%;
+	margin-left: 0%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	background-color: #0E1B2A;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.slot_label {
+  	text-align: center;
+  	color: white;
+  	background-color:#0A101A; 
+  	border:1px solid #666666;
+  	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  	width: 200px;
+}
+
+#slot_btm_line {
+	position: absolute;
+	top: 800px;
+	width: 260px;
+}
+.sel_event {
+	width:250px;
+	height: 45px;
+	background-color: #0E1B2A;
+	margin-right:0%;
+	margin-left: 0%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+  	justify-content: center;
+  	align-items: center;
+  	text-align: center;
+  	display: flex;
+  	border: none;
+}
+/*282828*/
+#filter_container{
+	overflow-y: scroll;
+	width: 280px;
+	height: 700px;
+}
+#add_filter {
+	float:right;
+	width:250px;
+	height: 45px;
+	margin-right:0%;
+	margin-left: 5%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	background-image: linear-gradient(#14253C,#173959);
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+#filter_button{
+	text-decoration: none;
+	color: white;
+	position: absolute;
+	top: 830px;
+	
+}
+#filter_button:hover{
+	text-decoration: none;
+	color: white;
+	border: 0.25px solid white;
+}
+
+#filter_close {
+	width: 10px;
+	padding-left:10px;
+	cursor: pointer;
+}
+#filter_close:hover {
+	cursor: pointer;
+}
+#filter_btm_line {
+	position: absolute;
+	top: 800px;
+	width: 260px;
+}
+
+#lua_editor {
+	letter-spacing: 0vh;
+	background-color: #282828;
+}
+.popover {
+	background-color: #808080;
+}
+
+/* Editor css */
+.CodeMirror {
+  border: 1px solid #eee;
+  width: 98%;
+  height: 85%;
+  background-color: #282828;
+  letter-spacing: 0vh;
+  color: white;
+}
+.CodeMirror-gutters {
+	background-color: #282828;
+	
+}
+.CodeMirror-cursor {
+  border-left: 1px solid white;
+  border-right: none;
+  width: 0;
+}
+.cm-s-default .cm-comment {color: gray;}
+.cm-s-default .cm-string {color: #00ff00;}
+.cm-s-default .cm-keyword {color: #14A7BD;}
+.cm-s-default .cm-builtin {color: #14A7BD;}
+.cm-s-default .cm-string-2 {color: #f50;}
+/* system output */
+#system_output {
+	margin: 0;
+	width:1000px;
+	height:400px;
+	background-color: #282828;
+	color: white;
+  	justify-content: center;
+  	line-height:15px;
+}
+#system_output h3 {
+	width: 100%;
+	font-family: 'Orbitron', sans-serif;
+	background-color: #0A101A;
+	color: white;
+	text-align: center;
+	letter-spacing: 0.2vh;
+}
+#output_area{
+	overflow: scroll;
+	width: 100%;
+	height: 91%;
+}

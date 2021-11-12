@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>DU Scripting Web Interface</title>
+
+	
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  
+	<script src="/js/codemirror-5.58.1/lib/codemirror.js"></script>
+	<link rel="stylesheet" href="/js/codemirror-5.58.1/lib/codemirror.css">
+	<script src="/js/codemirror-5.58.1/mode/lua/lua.js"></script>
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> 
+	
+	<link rel="stylesheet" href="/js/jquery-ui-1.12.1/jquery-ui.css">
+	<script src="/js/jquery-ui-1.12.1/jquery-ui.js"></script>
+	
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/js/websock.js"></script>
+</head>
+<body>
+	<div id="master_panel">
+		<div class="editor_panel" id="slots">
+			<h2>SLOTS</h2>
+			<hr>
+			<div class="slot" id="library" >
+				<input class="slot_label" type="text" value="library" readonly/>
+			</div>
+			<div class="slot" id="system">
+				<input class="slot_label" type="text" value="system" readonly/>
+			</div>
+			<div class="slot" id="unit">
+				<input class="slot_label" type="text" value="unit" readonly/>
+			</div>
+			<div class="slot" id="slot1">
+				<input class="slot_label" type="text" value="slot1" />
+			</div>
+			<div class="slot" id="slot2">
+				<input class="slot_label" type="text" value="slot2" />
+			</div>
+			<div class="slot" id="slot3">
+				<input class="slot_label" type="text" value="slot3" />
+			</div>
+			<div class="slot" id="slot4">
+				<input class="slot_label" type="text" value="slot4" />
+			</div>
+			<div class="slot" id="slot5">
+				<input class="slot_label" type="text" value="slot5" />
+			</div>
+			<div class="slot" id="slot6">
+				<input class="slot_label" type="text" value="slot6" />
+			</div>
+			<div class="slot" id="slot7">
+				<input class="slot_label" type="text" value="slot7" />
+			</div>
+			<div class="slot" id="slot8">
+				<input class="slot_label" type="text" value="slot8" />
+			</div>
+			<div class="slot" id="slot9">
+				<input class="slot_label" type="text" value="slot9" />
+			</div>
+			<div class="slot" id="slot10">
+				<input class="slot_label" type="text" value="slot10" />
+			</div>
+			<hr id="slot_btm_line">
+		</div>
+		<div class="editor_panel" id="filters">
+			<h2>FILTERS</h2>
+			<hr>
+			<div id="filter_container">
+				<div style="hidden;" class="filter" id="new_filter"></div>
+			</div>
+			<hr id="filter_btm_line">
+			<a id="filter_button" href=""><div id="add_filter">
+				+ ADD FILTER
+			</div></a>
+		</div>
+		<div class="editor_panel" id="Lua_Editor">
+			<h2>LUA EDITOR</h2>
+			<div class="lua_buttons">
+				<div class = "func" id="save"><a href="">SAVE</a></div>
+				<div  class = "func" id="load"><a href="">LOAD</a></div>
+				<div  class = "func" id="run"><a href="">&#9658;RUN</a></div>
+				<!--   <div  class = "func" id="stop"><a href="">&#9635;STOP</a></div> -->
+			</div>
+			
+			<textarea id="lua_editor"></textarea>
+			<script>
+			var myCodeMirror = CodeMirror.fromTextArea(document.getElementById("lua_editor"),{
+				lineNumbers: true,
+				mode: "lua",
+				readOnly: false
+			});
+			$(myCodeMirror.getWrapperElement()).hide();
+			</script>
+		</div>
+	</div>
+	
+	
+	
+	<div id="system_output">
+		<h3>SYSTEM OUTPUT</h3>
+		<div id="output_area"></div>
+	</div>
+	
+	
+	<div id="ui">
+	
+	</div>
+	<div id='selectPopup'>
+		<label>Choose Element Type</label>
+        <select id='choose_element' name='element_type'>
+        </select>
+    </div>
+    <script>
+    	$('#selectPopup').hide();
+    </script>
+	<script src="/js/ajax_lua.js" type="text/javascript"></script>
+	<div id='fake'></div>
+</body>
+</html>
